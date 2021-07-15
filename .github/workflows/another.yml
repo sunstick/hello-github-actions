@@ -9,3 +9,8 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+  test:
+    name: use secrets
+    environment: dev
+    run: |
+      echo "my key " ${{ secrets.MY_KEY }}
