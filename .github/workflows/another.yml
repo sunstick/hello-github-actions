@@ -14,4 +14,4 @@ jobs:
     environment: dev
     steps:
       - run: |
-        echo "my key " ${{ secrets.MY_KEY }}
+          echo "my key " ${{ secrets.MY_KEY }}
