@@ -12,5 +12,6 @@ jobs:
   test:
     name: use secrets
     environment: dev
-    run: |
-      echo "my key " ${{ secrets.MY_KEY }}
+    steps:
+      run: |
+        echo "my key " ${{ secrets.MY_KEY }}
