@@ -11,6 +11,7 @@ jobs:
           MY_NAME: "Mona"
   test:
     name: use secrets
+    runs-on: ubuntu-latest
     environment: dev
     steps:
       - run: |
