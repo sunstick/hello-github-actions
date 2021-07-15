@@ -13,11 +13,12 @@ jobs:
     name: use secrets
     runs-on: ubuntu-latest
     environment: dev
+    needs: build
     steps:
       - name: use secrets
         env:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
         run: |
-          echo "user: $username"
-          echo "pass: $password"
+          echo "user:" $username
+          echo "pass:" $password
