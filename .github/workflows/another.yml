@@ -14,5 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-      - run: |
-          echo "my key " ${{ secrets.MY_KEY }}
+      - name: use secrets
+        env:
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+        run: |
+          echo "user: $username"
+          echo "pass: $password"
